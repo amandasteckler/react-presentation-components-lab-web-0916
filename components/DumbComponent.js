@@ -10,9 +10,15 @@ class DumbComponent extends React.Component {
   }
 
   handleClick() {
-    this.setState({
-      mood: this.state.mood === "happy" ? "sad" : "happy"
-    })
+    if (this.state.mood === "happy") {
+      this.setState({
+        mood: "sad"
+      })
+    } else {
+      this.setState({
+        mood: "happy"
+      })
+    }
   }
 
   render() {
